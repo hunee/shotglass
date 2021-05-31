@@ -18,12 +18,9 @@
     Assets/GooglePlayGames/Editor/GPGSUtil.cs
 
         public static string GetAndroidSdkPath()
-
         {
-
             string sdkPath = EditorPrefs.GetString("AndroidSdkRoot");
-
-448: #if UNITY_2019 || UNITY_2020 || UNITY_2021 <--
+#if UNITY_2019 || UNITY_2020 || UNITY_2021 // <- 448
 
 
 
