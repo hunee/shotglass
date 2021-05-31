@@ -99,9 +99,9 @@ $ keytool -printcert -jarfile aa.apk
 ANDROID_SDK_ROOT= ~/Library/Android/sdk
 PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 
-  $ adb shell ip -f inet addr show wlan0
-  $ adb tcpip 5555
+$ adb shell ip -f inet addr show wlan0
+$ adb tcpip 5555
 
-  $ adb connect 172.30.1.24
-  $ adb devices
+$ adb connect 172.30.1.24
+$ adb devices
 ```
