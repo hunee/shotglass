@@ -66,8 +66,8 @@ Client ID:
 >> - ##### [보상형 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/rewarded?hl=ko) - PASS
 
 
-> ### [Firebase][firebase.google.com]
->> - ##### [Firebase Unity SDK](https://console.firebase.google.com/?hl=ko)
+> ### [Firebase](https://console.firebase.google.com/?hl=ko)
+>> - ##### [Firebase Unity SDK](https://firebase.google.com/download/unity?authuser=0)
 >> - ##### [Unity 프로젝트에 Firebase 추가](https://firebase.google.com/docs/unity/setup?hl=ko) - PASS
 >> - ##### Firebase.Analytics - PASS
 >> - ##### Firebase.Auth - PASS
