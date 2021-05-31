@@ -1,5 +1,4 @@
-Shot glass
-=============
+# Shot glass
 
 *single asterisks*
 _single underscores_
@@ -7,8 +6,8 @@ _single underscores_
 __double underscores__
 ~~cancelline~~
 
-- Google Play Console
--------------
+## - Google Play Console
+
 
   <https://play.google.com/console/developers>
 
@@ -20,14 +19,14 @@ __double underscores__
     https://github.com/playgameservices/play-games-plugin-for-unity/releases
     https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
-  - unity3d 2021 -> 448
+  - unity3d 2021 patch
 
     Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
         {
             string sdkPath = EditorPrefs.GetString("AndroidSdkRoot");
-#if UNITY_2019 || UNITY_2020 || UNITY_2021
+448: #if UNITY_2019 || UNITY_2020 || UNITY_2021
             ...
 ```
 
@@ -42,13 +41,13 @@ __double underscores__
     https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
   - adUnitId
-
+```
 sample ID: ca-app-pub-3940256099942544~3347511713
 
 배너 광고 ID: ca-app-pub-3940256099942544/6300978111
 
-리워드 광고 ID: ca-app-pub-3940256099942544/5224354917
-
+보상형 광고 ID: ca-app-pub-3940256099942544/5224354917
+```
 
 
   - 배너 광고  |  Unity  |  Google Developers
