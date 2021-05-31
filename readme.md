@@ -36,12 +36,11 @@ __double underscores__
 > ### [Google AdMob][apps.admob.com/v2/home]
 
 [apps.admob.com/v2/home]: https://apps.admob.com/v2/home
-
 >> - ##### [Google Mobile Ads Unity Plugin v6.0.0][github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]
 
 [github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]: https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
->> - adUnitId
+>> - ##### adUnitId
 ```
 sample ID: ca-app-pub-3940256099942544~3347511713
 배너 광고 ID: ca-app-pub-3940256099942544/6300978111
@@ -49,12 +48,12 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 ```
 
 
->> - [배너 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/banner]
+>> - ##### [배너 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/banner]
 
 [developers.google.com/admob/unity/banner]: https://developers.google.com/admob/unity/banner?hl=ko
 
 
->> - [보상형 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/rewarded]
+>> - ##### [보상형 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/rewarded]
 
 [developers.google.com/admob/unity/rewarded]: https://developers.google.com/admob/unity/rewarded?hl=ko
 
@@ -80,13 +79,13 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 
 [firebase.google.com/docs/auth/unity/password-auth]: https://firebase.google.com/docs/auth/unity/password-auth?authuser=0
 
->>> - ##### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase][firebase.google.com/docs/auth/unity/play-games]
+>>> - ###### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase][firebase.google.com/docs/auth/unity/play-games]
 
 [firebase.google.com/docs/auth/unity/play-games]: https://firebase.google.com/docs/auth/unity/play-games?hl=ko
 
->>> - ##### Firebase.Messaging
+>>> - ###### Firebase.Messaging
 
->>> - ##### Firebase.RemoteConfig
+>>> - ###### Firebase.RemoteConfig
 
 
 
@@ -106,7 +105,7 @@ $ vi ~/.zshrc
 source ~/.bash_profile
 ```
 
-  - debug keystore
+> - ##### debug keystore
 ```
 $ keytool -keystore ~/.android/debug.keystore -list -v
 Enter keystore password:  android
@@ -117,12 +116,12 @@ SHA-1
 9E:BC:4F:FD:EC:6A:30:E2:5D:35:8A:93:51:14:0C:5D:24:07:07:9C
 ```
 
-  - sign verify
+> - ##### sign verify
 ```  
 $ keytool -printcert -jarfile aa.apk  
 ```
 
-  - adb remote
+> - ##### adb remote
 ```  
 ANDROID_SDK_ROOT= ~/Library/Android/sdk
 PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
