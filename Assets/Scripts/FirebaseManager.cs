@@ -178,6 +178,20 @@ public class FirebaseManager : MonoBehaviour
 
     public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e) {
       UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
+      
+      UnityEngine.Debug.Log("From: " + e.Message.From);
+      UnityEngine.Debug.Log("Message ID: " + e.Message.MessageId);      
+/*
+      UnityEngine.Debug.Log("Received a new message");
+      if (e.Message.From.Length > 0)
+        UnityEngine.Debug.Log("from: " + e.Message.From);
+      if (e.Message.Data.Count > 0) {
+        UnityEngine.Debug.Log("data:");
+        foreach (System.Collections.Generic.KeyValuePair iter in
+             e.Message.Data) {
+          UnityEngine.Debug.Log("  " + iter.Key + ": " + iter.Value);
+        }
+      }*/
     }
 }
 
