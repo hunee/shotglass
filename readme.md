@@ -1,4 +1,4 @@
-#Shot glass
+# Shot glass
 ***
 
 *single asterisks*
@@ -8,17 +8,16 @@ __double underscores__
 ~~cancelline~~
 
 
-##[Google Play Console][play.google.com]
 [play.google.com]: https://play.google.com/console/developers
-
 [play-games-plugin-for-unity]: https://github.com/playgameservices/play-games-plugin-for-unity/releases
 
+> ### [Google Play Console][play.google.com]
+>> - [play-games-plugin-for-unity][play-games-plugin-for-unity]
+>> https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
->### GooglePlayGameServices
->>* [play-games-plugin-for-unity][play-games-plugin-for-unity]
->>* https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
->>+ Unity3D 2021 SDK not found.
->>Assets/GooglePlayGames/Editor/GPGSUtil.cs
+>> 
+>> - Unity3D 2021 SDK not found.
+>> Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
         {
@@ -29,13 +28,11 @@ __double underscores__
 
 
 [apps.admob.com]: https://apps.admob.com/v2/home
->### [GoogleMobileAds][apps.admob.com]
+[googleads-mobile-unity]: https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
-  
+> ### [Google AdMob][apps.admob.com]
+>> - [Google Mobile Ads Unity Plugin v6.0.0][googleads-mobile-unity]
 
-  - Google Mobile Ads Unity Plugin v6.0.0
-
-    https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
   - adUnitId
 ```
