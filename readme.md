@@ -1,23 +1,9 @@
 - Shot glass
 
 
-- Play Console
+- Google Play Console
   https://play.google.com/console/developers
 
-  - AndroidManifest.xml
-<?xml version="1.0" encoding="utf-8"?>
-<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
-<resources>
-  <!--app_id-->
-  <string name="app_id" translatable="false">234033842797</string>
-  <!--package_name-->
-  <string name="package_name" translatable="false"></string>
-  <!--leaderboard shot glass-->
-  <string name="leaderboard_shot_glass" translatable="false">CgkI7ZSE7OcGEAIQAQ</string>
-</resources>
-
-  - OAuth 클라이언트 ID: 
-    234033842797-9921q0jsh68obdqa5bqhu3d7viq4vahl.apps.googleusercontent.com
 
 
 - GooglePlayGameServices
@@ -31,6 +17,7 @@
         {
             string sdkPath = EditorPrefs.GetString("AndroidSdkRoot");
 448: #if UNITY_2019 || UNITY_2020 || UNITY_2021 <--
+
 
 
 - GoogleMobileAds
