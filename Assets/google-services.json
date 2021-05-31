@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "234033842797",
+    "project_id": "shot-glass-57056966",
+    "storage_bucket": "shot-glass-57056966.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:234033842797:android:f14696e29e5a0692b88d64",
+        "android_client_info": {
+          "package_name": "com.hunee.shotglass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "234033842797-4c0f3l78lc67p8569bl8k2o7d97v1d5m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hunee.shotglass",
+            "certificate_hash": "9ebc4ffdec6a30e25d358a9351140c5d2407079c"
+          }
+        },
+        {
+          "client_id": "234033842797-9921q0jsh68obdqa5bqhu3d7viq4vahl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzFAkvMQseCgsH1kYZJSnRBtmK6So8yX4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "234033842797-9921q0jsh68obdqa5bqhu3d7viq4vahl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-3242536464200417~8435892949"
+    }
+  ],
+  "configuration_version": "1"
+}
