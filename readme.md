@@ -7,36 +7,6 @@ __double underscores__
 ~~cancelline~~
 
 
-<span style="color:blue">some *blue* text</span>.
-<span style="color:red">some **This is Red Bold.** text</span>
-<span style="color:blue">some *This is Blue italic.* text</span>
-
-<font color='red'>test blue color font</font>
-
-<h3 style="color:#ff0000">Danger</h3>
-
-# Color Test Document
-
-<style>H1{color:Blue;}</style>
-<style>H2{color:DarkOrange;}</style>
-<style>p{color:Black;}</style>
-
-## Second Heading
-
-This is a test to see how the colors work.
-
-<style>
-H1{color:Blue !important;}
-H2{color:DarkOrange !important;}
-p{color:Black !important;}
-</style>
-
-# Color Test Document
-
-## Second Heading
-
-This is a test to see how the colors work.
-
 <style>
 r { color: Red }
 o { color: Orange }
@@ -67,6 +37,25 @@ g { color: Green }
 448: #if UNITY_2019 || UNITY_2020 || UNITY_2021
             ...
 ```
+>> - ##### Android setup 
+```
+<?xml version="1.0" encoding="utf-8"?>
+<!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
+<resources>
+  <!--app_id-->
+  <string name="app_id" translatable="false">234033842797</string>
+  <!--package_name-->
+  <string name="package_name" translatable="false"></string>
+  <!--leaderboard shot glass-->
+  <string name="leaderboard_shot_glass" translatable="false">CgkI7ZSE7OcGEAIQAQ</string>
+</resources>
+
+OAuth Client ID: 
+  234033842797-9921q0jsh68obdqa5bqhu3d7viq4vahl.apps.googleusercontent.com
+```
+
+<img src="http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
+<img src="http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
 
 
 [apps.admob.com/v2/home]: https://apps.admob.com/v2/home
@@ -79,12 +68,12 @@ g { color: Green }
 >> - ##### [Google Mobile Ads Unity Plugin v6.0.0][github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]
 >> - ##### adUnitId
 ```
-sample ID: ca-app-pub-3940256099942544~3347511713
-배너 광고 ID: ca-app-pub-3940256099942544/6300978111
-보상형 광고 ID: ca-app-pub-3940256099942544/5224354917
+          sample ID: ca-app-pub-3940256099942544~3347511713
+          배너 광고 ID: ca-app-pub-3940256099942544/6300978111
+          보상형 광고 ID: ca-app-pub-3940256099942544/5224354917
 ```
->> - ##### [배너 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/banner]
->> - ##### [보상형 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/rewarded]
+>> - ##### [배너 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/banner] - PASS
+>> - ##### [보상형 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/rewarded] - PASS
 
 
 [firebase.google.com]: https://console.firebase.google.com/?hl=ko
@@ -96,14 +85,14 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 
 > ### [Firebase][firebase.google.com]
 >> - ##### [Firebase Unity SDK][firebase.google.com/download/unity]
->> - ##### [Unity 프로젝트에 Firebase 추가][firebase.google.com/docs/unity/setup]
->> - ##### Firebase.Analytics
+>> - ##### [Unity 프로젝트에 Firebase 추가][firebase.google.com/docs/unity/setup] - PASS
+>> - ##### Firebase.Analytics - PASS
 >> - ##### Firebase.Auth - PASS
->>> - ###### [Unity를 사용하여 비밀번호 기반 계정으로 Firebase에 인증][firebase.google.com/docs/auth/unity/password-auth]
->>> - ###### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase][firebase.google.com/docs/auth/unity/play-games]
->> - ##### Firebase.Messaging
+>>> - ###### [Unity를 사용하여 비밀번호 기반 계정으로 Firebase에 인증][firebase.google.com/docs/auth/unity/password-auth] - PASS
+>>> - ###### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase][firebase.google.com/docs/auth/unity/play-games] - PASS
+>> - ##### Firebase.Messaging - PASS
 >>> - ##### Token: fxA77rkpTl--6NFPVD0Ky7:APA91bGSV9eo35gHnr2JwS8gOAGjfF2oRZGHlrrcjkAEZUhiPUXFN4G6eL4y0s1ZzFIC9nGrTiXr1y08HeVpwGsX0qSw6gjp7m_nZVBYd7RvMvqjSQfnsAROdcKT9GYIOPfEEilwaRRP
->> - ##### Firebase.RemoteConfig
+>> - ##### Firebase.RemoteConfig - ????
 
 
 
