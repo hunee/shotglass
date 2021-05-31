@@ -6,20 +6,18 @@ _single underscores_
 __double underscores__
 ~~cancelline~~
 
-## - Google Play Console
-
-
+## * Google Play Console
   <https://play.google.com/console/developers>
 
 
 
 - GooglePlayGameServices
-  - play-games-plugin-for-unity
+  + play-games-plugin-for-unity
 
     https://github.com/playgameservices/play-games-plugin-for-unity/releases
     https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
-  - unity3d 2021 patch
+  + unity3d 2021 patch
 
     Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
@@ -32,7 +30,7 @@ __double underscores__
 
 
 
-- GoogleMobileAds
+## * GoogleMobileAds
 
   https://apps.admob.com/v2/home
 
@@ -43,9 +41,7 @@ __double underscores__
   - adUnitId
 ```
 sample ID: ca-app-pub-3940256099942544~3347511713
-
 배너 광고 ID: ca-app-pub-3940256099942544/6300978111
-
 보상형 광고 ID: ca-app-pub-3940256099942544/5224354917
 ```
 
@@ -60,7 +56,7 @@ sample ID: ca-app-pub-3940256099942544~3347511713
     https://developers.google.com/admob/unity/rewarded?hl=ko
 
 
-- Firebase
+## * Firebase
 
   - Firebase Unity SDK
 
@@ -89,40 +85,38 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 
 
 
-- Android
-  - osx
+## * Android
 
-  ~/.bash_profile
+```
+$ vi ~/.bash_profile
 
 export ANDROID_HOME=/Library/Android/android-sdk-macosx
-
 export ANDROID_SDK_ROOT=/Library/Android/android-sdk-macosx
-
 export NDK_ROOT=/Library/Android/android-ndk-r8e
-
 export PATH=${PATH}:${ANDROID_SDK_ROOT}\tools:${ANDROID_SDK_ROOT}\platform-tools:${NDK_ROOT}
 
-
-  $ vi ~/.zshrc
-
+$ vi ~/.zshrc
 source ~/.bash_profile
-
-
+```
 
   - debug keystore
+```
 $ keytool -keystore ~/.android/debug.keystore -list -v
-
 Enter keystore password:  android
 
+...
 
-  - SHA-1
+SHA-1
 9E:BC:4F:FD:EC:6A:30:E2:5D:35:8A:93:51:14:0C:5D:24:07:07:9C
-
+```
 
   - sign verify
+```  
 $ keytool -printcert -jarfile aa.apk  
+```
 
   - adb remote
+```  
 ANDROID_SDK_ROOT= ~/Library/Android/sdk
 PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 
@@ -131,3 +125,4 @@ PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
 
   $ adb connect 172.30.1.24
   $ adb devices
+```
