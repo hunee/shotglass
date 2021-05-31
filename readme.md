@@ -1,9 +1,16 @@
-- Shot glass
+Shot glass
+=============
 
+*single asterisks*
+_single underscores_
+**double asterisks**
+__double underscores__
+~~cancelline~~
 
 - Google Play Console
+-------------
 
-  https://play.google.com/console/developers
+  <https://play.google.com/console/developers>
 
 
 
@@ -16,13 +23,13 @@
   - unity3d 2021 -> 448
 
     Assets/GooglePlayGames/Editor/GPGSUtil.cs
-
+```C#
         public static string GetAndroidSdkPath()
         {
             string sdkPath = EditorPrefs.GetString("AndroidSdkRoot");
 #if UNITY_2019 || UNITY_2020 || UNITY_2021
             ...
-
+```
 
 
 
