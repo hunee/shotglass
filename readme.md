@@ -8,15 +8,20 @@ __double underscores__
 ~~cancelline~~
 
 
-[play.google.com]: https://play.google.com/console/developers
-[play-games-plugin-for-unity]: https://github.com/playgameservices/play-games-plugin-for-unity/releases
 
-> ### [Google Play Console][play.google.com]
->> - [play-games-plugin-for-unity][play-games-plugin-for-unity]
+
+> ### [Google Play Console][play.google.com/console/developers]
+
+[play.google.com/console/developers]: https://play.google.com/console/developers
+
+>> - [play-games-plugin-for-unity][github.com/playgameservices/play-games-plugin-for-unity/releases]
+
+[github.com/playgameservices/play-games-plugin-for-unity/releases]: https://github.com/playgameservices/play-games-plugin-for-unity/releases
+
 >> https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
->> 
 >> - Unity3D 2021 SDK not found.
+
 >> Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
@@ -27,14 +32,16 @@ __double underscores__
 ```
 
 
-[apps.admob.com]: https://apps.admob.com/v2/home
-[googleads-mobile-unity]: https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
-> ### [Google AdMob][apps.admob.com]
->> - [Google Mobile Ads Unity Plugin v6.0.0][googleads-mobile-unity]
+> ### [Google AdMob][apps.admob.com/v2/home]
 
+[apps.admob.com/v2/home]: https://apps.admob.com/v2/home
 
-  - adUnitId
+>> - [Google Mobile Ads Unity Plugin v6.0.0][github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]
+
+[github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]: https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
+
+>> - adUnitId
 ```
 sample ID: ca-app-pub-3940256099942544~3347511713
 배너 광고 ID: ca-app-pub-3940256099942544/6300978111
@@ -42,40 +49,44 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 ```
 
 
-  - 배너 광고  |  Unity  |  Google Developers
+>> - [배너 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/banner]
 
-    https://developers.google.com/admob/unity/banner?hl=ko
-
-
-  - 보상형 광고  |  Unity  |  Google Developers
-
-    https://developers.google.com/admob/unity/rewarded?hl=ko
+[developers.google.com/admob/unity/banner]: https://developers.google.com/admob/unity/banner?hl=ko
 
 
-## Firebase
+>> - [보상형 광고  |  Unity  |  Google Developers][developers.google.com/admob/unity/rewarded]
 
-  - Firebase Unity SDK
-
-    https://firebase.google.com/download/unity?authuser=0
-
-  - Unity 프로젝트에 Firebase 추가
-
-    https://firebase.google.com/docs/unity/setup?hl=ko
+[developers.google.com/admob/unity/rewarded]: https://developers.google.com/admob/unity/rewarded?hl=ko
 
 
-  - Firebase.Analytics
+> ### [Firebase][firebase.google.com]
 
-  - Firebase.Auth
-    - Unity를 사용하여 비밀번호 기반 계정으로 Firebase에 인증
+[firebase.google.com]: https://console.firebase.google.com/?hl=ko
 
-      https://firebase.google.com/docs/auth/unity/password-auth?authuser=0
 
-    - Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase
+>> - ##### [Firebase Unity SDK][firebase.google.com/download/unity]
 
-      https://firebase.google.com/docs/auth/unity/play-games?hl=ko
+[firebase.google.com/download/unity]:https://firebase.google.com/download/unity?authuser=0
 
-  - Firebase.Messaging
-  - Firebase.RemoteConfig
+>> - ##### [Unity 프로젝트에 Firebase 추가][firebase.google.com/docs/unity/setup]
+
+[firebase.google.com/docs/unity/setup]: https://firebase.google.com/docs/unity/setup?hl=ko
+
+>> - ##### Firebase.Analytics
+
+>> - ##### Firebase.Auth
+
+>>> - ###### [Unity를 사용하여 비밀번호 기반 계정으로 Firebase에 인증][firebase.google.com/docs/auth/unity/password-auth]
+
+[firebase.google.com/docs/auth/unity/password-auth]: https://firebase.google.com/docs/auth/unity/password-auth?authuser=0
+
+>>> - ##### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase][firebase.google.com/docs/auth/unity/play-games]
+
+[firebase.google.com/docs/auth/unity/play-games]: https://firebase.google.com/docs/auth/unity/play-games?hl=ko
+
+>>> - ##### Firebase.Messaging
+
+>>> - ##### Firebase.RemoteConfig
 
 
 
