@@ -1,4 +1,5 @@
-# Shot glass
+#Shot glass
+***
 
 *single asterisks*
 _single underscores_
@@ -7,23 +8,17 @@ __double underscores__
 ~~cancelline~~
 
 
-## Google Play Console
-***
+##[Google Play Console][play.google.com]
+[play.google.com]: https://play.google.com/console/developers
 
-> https://play.google.com/console/developers
-
-
-
-## GooglePlayGameServices
-  > + play-games-plugin-for-unity
-
-    https://github.com/playgameservices/play-games-plugin-for-unity/releases
-    https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
+[play-games-plugin-for-unity]: https://github.com/playgameservices/play-games-plugin-for-unity/releases
 
 
-  > + unity3d 2021 patch
-
-    Assets/GooglePlayGames/Editor/GPGSUtil.cs
+>### GooglePlayGameServices
+>>* [play-games-plugin-for-unity][play-games-plugin-for-unity]
+>>* https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
+>>+ Unity3D 2021 SDK not found.
+>>Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
         {
@@ -33,10 +28,10 @@ __double underscores__
 ```
 
 
+[apps.admob.com]: https://apps.admob.com/v2/home
+>### [GoogleMobileAds][apps.admob.com]
 
-## GoogleMobileAds
-
-  https://apps.admob.com/v2/home
+  
 
   - Google Mobile Ads Unity Plugin v6.0.0
 
