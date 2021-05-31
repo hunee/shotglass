@@ -1,5 +1,4 @@
 # Shot glass
-***
 
 *single asterisks*
 _single underscores_
