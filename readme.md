@@ -13,14 +13,15 @@
     https://github.com/playgameservices/play-games-plugin-for-unity/releases
     https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
-  - unity3d 2021
+  - unity3d 2021 -> 448
 
     Assets/GooglePlayGames/Editor/GPGSUtil.cs
 
         public static string GetAndroidSdkPath()
         {
             string sdkPath = EditorPrefs.GetString("AndroidSdkRoot");
-#if UNITY_2019 || UNITY_2020 || UNITY_2021 // <- 448
+#if UNITY_2019 || UNITY_2020 || UNITY_2021
+            ...
 
 
 
