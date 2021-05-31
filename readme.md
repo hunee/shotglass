@@ -76,9 +76,8 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 >>> ###### GoogleMobileAds -> Settings
 ![](Resources/unity_gma_inspector_admob.png)
 ```
-AdMob AppId: 
-  Android: ca-app-pub-3940256099942544~3347511713
-  iOS:
+Android: ca-app-pub-3940256099942544~3347511713
+iOS    : ca-app-pub-3940256099942544~1458002511
 ```
 
 >> - ##### [배너 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/banner?hl=ko) - PASS
