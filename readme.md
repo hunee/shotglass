@@ -11,42 +11,31 @@ __double underscores__
 <span style="color:red">some **This is Red Bold.** text</span>
 <span style="color:blue">some *This is Blue italic.* text</span>
 
-~~This is green~~
-_this is blue_
-
 <font color='red'>test blue color font</font>
-
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
-- 
-
-<span style="color:red">붉은 색</span>
-<span style="color:blue">파란 색</span>
 
 <h3 style="color:#ff0000">Danger</h3>
 
-```diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold)@@
-```
+# Color Test Document
 
-```json
-   // code for coloring
-```
-```html
-   // code for coloring
-```
-```js
-   // code for coloring
-```
-```css
-   // code for coloring
-```
-// etc.
+<style>H1{color:Blue;}</style>
+<style>H2{color:DarkOrange;}</style>
+<style>p{color:Black;}</style>
+
+## Second Heading
+
+This is a test to see how the colors work.
+
+<style>
+H1{color:Blue !important;}
+H2{color:DarkOrange !important;}
+p{color:Black !important;}
+</style>
+
+# Color Test Document
+
+## Second Heading
+
+This is a test to see how the colors work.
 
 <style>
 r { color: Red }
