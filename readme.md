@@ -35,6 +35,7 @@
     https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
   - adUnitId
+
 sample ID: ca-app-pub-3940256099942544~3347511713
 
 배너 광고 ID: ca-app-pub-3940256099942544/6300978111
@@ -46,6 +47,7 @@ sample ID: ca-app-pub-3940256099942544~3347511713
   - 배너 광고  |  Unity  |  Google Developers
 
     https://developers.google.com/admob/unity/banner?hl=ko
+
 
   - 보상형 광고  |  Unity  |  Google Developers
 
@@ -83,7 +85,8 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 
 - Android
   - osx
-  $ vi ~/.bash_profile
+
+  ~/.bash_profile
 
 export ANDROID_HOME=/Library/Android/android-sdk-macosx
 
