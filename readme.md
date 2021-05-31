@@ -1,5 +1,8 @@
 # Shot glass
 
+<img src="Resources/a0e32dc5c27bc87a40e04578d4db2a70.jpg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
+<img src="Resources/a0e32dc5c27bc87a40e04578d4db2a70.jpg" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
+
 *single asterisks*
 _single underscores_
 **double asterisks**
@@ -26,7 +29,7 @@ https://github.com/googleads/googleads-mobile-unity
 > ### [Google Play Console](https://play.google.com/console/developers)
 >> - ##### [play-games-plugin-for-unity](https://github.com/playgameservices/play-games-plugin-for-unity/releases)
 >>> ###### https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
->> - ##### Unity3D 2021 SDK not found error.
+>> - ##### Unity3D 2021 'SDK not found' error.
 >>> ###### Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
@@ -35,7 +38,8 @@ https://github.com/googleads/googleads-mobile-unity
 448: #if UNITY_2019 || UNITY_2020 || UNITY_2021
             ...
 ```
->> - ##### Google Play Games -> Setup -> Android setup 
+>> - ##### Google Play Games -> Setup -> Android setup
+![](Resources/R1280x0.png)
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
@@ -51,10 +55,6 @@ https://github.com/googleads/googleads-mobile-unity
 Client ID: 
   234033842797-9921q0jsh68obdqa5bqhu3d7viq4vahl.apps.googleusercontent.com
 ```
-
-<img src="http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
-<img src="http://cfile6.uf.tistory.com/image/2426E646543C9B4532C7B0" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
-
 
 > ### [Google AdMob](https://apps.admob.com/v2/home)
 >> - ##### [Google Mobile Ads Unity Plugin v6.0.0](https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0)
@@ -122,17 +122,16 @@ AdMob AppId:
 >> - ##### Firebase.RemoteConfig - ????
 
 
-
-
-
 ## Android
 
 ```
 $ vi ~/.bash_profile
 
-export ANDROID_HOME=/Library/Android/android-sdk-macosx
-export ANDROID_SDK_ROOT=/Library/Android/android-sdk-macosx
-export NDK_ROOT=/Library/Android/android-ndk-r8e
+export ANDROID_SDK_ROOT= ~/Library/Android/sdk
+export NDK_ROOT=~/Library/Android/ndk
+
+export ANDROID_HOME=$ANDROID_SDK_ROOT
+
 export PATH=${PATH}:${ANDROID_SDK_ROOT}\tools:${ANDROID_SDK_ROOT}\platform-tools:${NDK_ROOT}
 
 $ vi ~/.zshrc
@@ -142,7 +141,7 @@ source ~/.bash_profile
 > - ##### debug keystore
 ```
 $ keytool -keystore ~/.android/debug.keystore -list -v
-Enter keystore password:  android
+Enter keystore password: android
 
 Keystore type: jks
 Keystore provider: SUN
@@ -202,8 +201,8 @@ The certificate uses the SHA1withRSA signature algorithm which is considered a s
 
 > - ##### [adb](https://developer.android.com/studio/command-line/adb?hl=ko)
 ```  
-ANDROID_SDK_ROOT= ~/Library/Android/sdk
-PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools/
+$ whereis adb 
+~/Library/Android/sdk/platform-tools/adb
 
 $ adb shell ip -f inet addr show wlan0
 $ adb tcpip 5555
@@ -229,3 +228,5 @@ u0_a177       1096  3439 2113008 264548 0                   0 S com.hunee.shotgl
 $ adb logcat -c   
 $ adb logcat --pid 2401 -v color | grep Unity
 ```
+
+
