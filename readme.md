@@ -6,19 +6,20 @@ _single underscores_
 __double underscores__
 ~~cancelline~~
 
-## * Google Play Console
-  <https://play.google.com/console/developers>
+
+## Google Play Console
+  https://play.google.com/console/developers
 
 
 
-- GooglePlayGameServices
+## GooglePlayGameServices
   + play-games-plugin-for-unity
 
     https://github.com/playgameservices/play-games-plugin-for-unity/releases
     https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
-  + unity3d 2021 patch
 
+  + unity3d 2021 patch
     Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
@@ -30,7 +31,7 @@ __double underscores__
 
 
 
-## * GoogleMobileAds
+## GoogleMobileAds
 
   https://apps.admob.com/v2/home
 
@@ -56,7 +57,7 @@ sample ID: ca-app-pub-3940256099942544~3347511713
     https://developers.google.com/admob/unity/rewarded?hl=ko
 
 
-## * Firebase
+## Firebase
 
   - Firebase Unity SDK
 
@@ -85,7 +86,7 @@ sample ID: ca-app-pub-3940256099942544~3347511713
 
 
 
-## * Android
+## Android
 
 ```
 $ vi ~/.bash_profile
