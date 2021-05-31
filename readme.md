@@ -40,7 +40,7 @@ https://github.com/googleads/googleads-mobile-unity
 ```
 >> - ##### Google Play Games -> Setup -> Android setup
 ![](Resources/R1280x0.png)
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--Google Play game services IDs. Save this file as res/values/games-ids.xml in your project.-->
 <resources>
@@ -51,14 +51,16 @@ https://github.com/googleads/googleads-mobile-unity
   <!--leaderboard shot glass-->
   <string name="leaderboard_shot_glass" translatable="false">CgkI7ZSE7OcGEAIQAQ</string>
 </resources>
+```
 
+```
 Client ID: 
   234033842797-9921q0jsh68obdqa5bqhu3d7viq4vahl.apps.googleusercontent.com
 ```
 
 > ### [Google AdMob](https://apps.admob.com/v2/home)
 >> - ##### [Google Mobile Ads Unity Plugin v6.0.0](https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0)
-```
+```C#
 ...
 using GoogleMobileAds.Api;
 ...
@@ -81,7 +83,7 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 ```
 
 >> - ##### [배너 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/banner?hl=ko) - PASS
-```
+```C#
     #if UNITY_ANDROID
       string adUnitId = "ca-app-pub-3940256099942544/6300978111";
     #elif UNITY_IPHONE
@@ -94,7 +96,7 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 ```
 
 >> - ##### [보상형 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/rewarded?hl=ko) - PASS
-```
+```C#
     string adUnitId;
     #if UNITY_ANDROID
         adUnitId = "ca-app-pub-3940256099942544/5224354917";
@@ -115,31 +117,48 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 >>> - ###### [Unity를 사용하여 비밀번호 기반 계정으로 Firebase에 인증](https://firebase.google.com/docs/auth/unity/password-auth?authuser=0) - PASS
 >>> - ###### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase](https://firebase.google.com/docs/auth/unity/play-games?hl=ko) - PASS
 >> - ##### Firebase.Messaging - PASS
+```C#
+    void SetFirebaseMessagingListeners() {
+      Firebase.Messaging.FirebaseMessaging.TokenReceived += OnTokenReceived;
+      Firebase.Messaging.FirebaseMessaging.MessageReceived += OnMessageReceived;
+    }
+
+    public void OnTokenReceived(object sender, Firebase.Messaging.TokenReceivedEventArgs token) {
+      UnityEngine.Debug.Log("Received Registration Token: " + token.Token);
+    }
+
+    public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e) {
+      UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
 ```
+
+```log
 05-31 18:11:45.341  2401  2452 I Unity   : Received Registration Token: fxA77rkpTl--6NFPVD0Ky7:APA91bGSV9eo35gHnr2JwS8gOAGjfF2oRZGHlrrcjkAEZUhiPUXFN4G6eL4y0s1ZzFIC9nGrTiXr1y08HeVpwGsX0qSw6gjp7m_nZVBYd7RvMvqjSQfnsAROdcKT9GYIOPfEEilwaRRP
 ```
+>>> - ##### [알림 작성 – Firebase Console](https://console.firebase.google.com/project/shot-glass-57056966/notification/compose?hl=ko&campaignId=3632850544257805467&dupe=true)
+
 >> - ##### Firebase.RemoteConfig - ????
 
 
 ## Android
 
-```
-$ vi ~/.bash_profile
-
+```bash
+% vi ~/.bash_profile
 export ANDROID_SDK_ROOT= ~/Library/Android/sdk
 export NDK_ROOT=~/Library/Android/ndk
 
 export ANDROID_HOME=$ANDROID_SDK_ROOT
 
 export PATH=${PATH}:${ANDROID_SDK_ROOT}\tools:${ANDROID_SDK_ROOT}\platform-tools:${NDK_ROOT}
+```
 
-$ vi ~/.zshrc
+```
+% vi ~/.zshrc
 source ~/.bash_profile
 ```
 
 > - ##### debug keystore
-```
-$ keytool -keystore ~/.android/debug.keystore -list -v
+```bash
+% keytool -keystore ~/.android/debug.keystore -list -v
 Enter keystore password: android
 
 Keystore type: jks
@@ -175,8 +194,8 @@ The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS
 ```
 
 > - ##### sign verify
-```  
-$ keytool -printcert -jarfile apk_name.apk
+```bash
+% keytool -printcert -jarfile apk_name.apk
 
 Signer #1:
 
@@ -199,33 +218,33 @@ The certificate uses the SHA1withRSA signature algorithm which is considered a s
 ```
 
 > - ##### [adb](https://developer.android.com/studio/command-line/adb?hl=ko)
-```  
-$ whereis adb 
+```bash
+% whereis adb 
 ~/Library/Android/sdk/platform-tools/adb
 
-$ adb shell ip -f inet addr show wlan0
-$ adb tcpip 5555
+% adb shell ip -f inet addr show wlan0
+% adb tcpip 5555
 
-$ adb connect 172.30.1.24
-$ adb devices
+% adb connect 172.30.1.24
+% adb devices
 List of devices attached
 172.30.1.24:5555	device
 
-$ adb shell ps | grep shotglass
+% adb shell ps | grep shotglass
 u0_a177       1096  3439 2113008 264548 0                   0 S com.hunee.shotglass
 
-$ adb -s 172.30.1.24 ...
+% adb -s 172.30.1.24 ...
 
 ```
 
 > - ##### [adb logcat](https://developer.android.com/studio/command-line/logcat?hl=ko)
 
-```
-$ adb shell ps | grep shotglass
+```bash
+% adb shell ps | grep shotglass
 u0_a177       1096  3439 2113008 264548 0                   0 S com.hunee.shotglass
 
-$ adb logcat -c   
-$ adb logcat --pid 2401 -v color | grep Unity
+% adb logcat -c   
+% adb logcat --pid 2401 -v color | grep Unity
 ```
 
 
