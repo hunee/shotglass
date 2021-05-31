@@ -21,6 +21,8 @@ g { color: Green }
 
 **My Bold Text, in red color.**{: style="color: red; opacity: 0.80;" }
 
+https://github.com/googleads/googleads-mobile-unity
+
 > ### [Google Play Console](https://play.google.com/console/developers)
 >> - ##### [play-games-plugin-for-unity](https://github.com/playgameservices/play-games-plugin-for-unity/releases)
 >>> ###### https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
@@ -56,15 +58,55 @@ Client ID:
 
 > ### [Google AdMob](https://apps.admob.com/v2/home)
 >> - ##### [Google Mobile Ads Unity Plugin v6.0.0](https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0)
->> - ##### adUnitId
 ```
-          sample ID: ca-app-pub-3940256099942544~3347511713
-          배너 광고 ID: ca-app-pub-3940256099942544/6300978111
-          보상형 광고 ID: ca-app-pub-3940256099942544/5224354917
+...
+using GoogleMobileAds.Api;
+...
+public class GoogleMobileAdsDemoScript : MonoBehaviour
+{
+    public void Start()
+    {
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(initStatus => { });
+    }
+}
 ```
->> - ##### [배너 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/banner?hl=ko) - PASS
->> - ##### [보상형 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/rewarded?hl=ko) - PASS
 
+>> - ##### [시작하기  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/quick-start?hl=ko)
+>>> ###### GoogleMobileAds -> Settings
+![](Resources/unity_gma_inspector_admob.png)
+```
+AdMob AppId: 
+  Android: ca-app-pub-3940256099942544~3347511713
+  iOS:
+```
+
+>> - ##### [배너 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/banner?hl=ko) - PASS
+```
+    #if UNITY_ANDROID
+      string adUnitId = "ca-app-pub-3940256099942544/6300978111";
+    #elif UNITY_IPHONE
+      string adUnitId = "ca-app-pub-3940256099942544/2934735716";
+    #else
+      string adUnitId = "unexpected_platform";
+    #endif
+
+    this.bannerView = new BannerView(adUnitId, AdSize.Banner, AdPosition.Top);
+```
+
+>> - ##### [보상형 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/rewarded?hl=ko) - PASS
+```
+    string adUnitId;
+    #if UNITY_ANDROID
+        adUnitId = "ca-app-pub-3940256099942544/5224354917";
+    #elif UNITY_IPHONE
+        adUnitId = "ca-app-pub-3940256099942544/1712485313";
+    #else
+        adUnitId = "unexpected_platform";
+    #endif
+
+    this.rewardedAd = new RewardedAd(adUnitId);
+```
 
 > ### [Firebase](https://console.firebase.google.com/?hl=ko)
 >> - ##### [Firebase Unity SDK](https://firebase.google.com/download/unity?authuser=0)
@@ -75,8 +117,7 @@ Client ID:
 >>> - ###### [Unity에서 Google Play 게임 서비스를 사용하여 인증  |  Firebase](https://firebase.google.com/docs/auth/unity/play-games?hl=ko) - PASS
 >> - ##### Firebase.Messaging - PASS
 ```
-Received Registration Token:
- fxA77rkpTl--6NFPVD0Ky7:APA91bGSV9eo35gHnr2JwS8gOAGjfF2oRZGHlrrcjkAEZUhiPUXFN4G6eL4y0s1ZzFIC9nGrTiXr1y08HeVpwGsX0qSw6gjp7m_nZVBYd7RvMvqjSQfnsAROdcKT9GYIOPfEEilwaRRP
+05-31 18:11:45.341  2401  2452 I Unity   : Received Registration Token: fxA77rkpTl--6NFPVD0Ky7:APA91bGSV9eo35gHnr2JwS8gOAGjfF2oRZGHlrrcjkAEZUhiPUXFN4G6eL4y0s1ZzFIC9nGrTiXr1y08HeVpwGsX0qSw6gjp7m_nZVBYd7RvMvqjSQfnsAROdcKT9GYIOPfEEilwaRRP
 ```
 >> - ##### Firebase.RemoteConfig - ????
 
