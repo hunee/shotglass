@@ -8,6 +8,7 @@
 
 - GooglePlayGameServices
   - play-games-plugin-for-unity
+  
     https://github.com/playgameservices/play-games-plugin-for-unity/releases
     https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
