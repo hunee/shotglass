@@ -14,15 +14,15 @@ __double underscores__
 
 [play.google.com/console/developers]: https://play.google.com/console/developers
 
->> - [play-games-plugin-for-unity][github.com/playgameservices/play-games-plugin-for-unity/releases]
+>> - ##### [play-games-plugin-for-unity][github.com/playgameservices/play-games-plugin-for-unity/releases]
 
 [github.com/playgameservices/play-games-plugin-for-unity/releases]: https://github.com/playgameservices/play-games-plugin-for-unity/releases
 
->> https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
+>>>> ###### https://github.com/playgameservices/play-games-plugin-for-unity/tree/master/current-build
 
->> - Unity3D 2021 SDK not found.
+>> - ##### Unity3D 2021 SDK not found.
 
->> Assets/GooglePlayGames/Editor/GPGSUtil.cs
+>>>> ###### Assets/GooglePlayGames/Editor/GPGSUtil.cs
 ```C#
         public static string GetAndroidSdkPath()
         {
@@ -37,7 +37,7 @@ __double underscores__
 
 [apps.admob.com/v2/home]: https://apps.admob.com/v2/home
 
->> - [Google Mobile Ads Unity Plugin v6.0.0][github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]
+>> - ##### [Google Mobile Ads Unity Plugin v6.0.0][github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]
 
 [github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0]: https://github.com/googleads/googleads-mobile-unity/releases/tag/v6.0.0
 
