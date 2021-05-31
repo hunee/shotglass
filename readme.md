@@ -21,6 +21,9 @@ _this is blue_
 - ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
 - 
 
+<span style="color:red">붉은 색</span>
+<span style="color:blue">파란 색</span>
+
 <h3 style="color:#ff0000">Danger</h3>
 
 ```diff
