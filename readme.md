@@ -112,6 +112,8 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 22:        private string adMobIOSAppId = "ca-app-pub-3940256099942544~1458002511";//string.Empty;
 ```
 
+<br>
+
 >> - ##### [배너 광고  |  Unity  |  Google Developers](https://developers.google.com/admob/unity/banner?hl=ko) - PASS
 ```C#
     #if UNITY_ANDROID
@@ -147,7 +149,6 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 >> - ##### Firebase.Analytics - PASS
 >>> - ###### Test device setup
 >>>> To enable sending of DebugView data on a connected Android test device for a configured Firebase Analytics app, you can follow the step below:
-
 >>>> 1. If you are simply working with single build variant, the following command is enough:
 ```bash
 adb shell setprop debug.firebase.analytics.app [your_app_package_name]
@@ -192,6 +193,8 @@ adb shell setprop debug.firebase.analytics.app com.hunee.shotglass
     public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e) {
       UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
 ```
+
+<br>
 
 ```log
 05-31 18:11:45.341  2401  2452 I Unity   : Received Registration Token: fxA77rkpTl--6NFPVD0Ky7:APA91bGSV9eo35gHnr2JwS8gOAGjfF2oRZGHlrrcjkAEZUhiPUXFN4G6eL4y0s1ZzFIC9nGrTiXr1y08HeVpwGsX0qSw6gjp7m_nZVBYd7RvMvqjSQfnsAROdcKT9GYIOPfEEilwaRRP
