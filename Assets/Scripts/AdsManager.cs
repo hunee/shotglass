@@ -24,14 +24,15 @@ public class AdsManager : MonoBehaviour
     Debug.LogError("Awake");
 
     DontDestroyOnLoad(gameObject);
-
-    // Initialize the Google Mobile Ads SDK.
-    MobileAds.Initialize(initStatus => { });
   }
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
+      while (!FirebaseManager.firebaseInitialized) {
+        yield return null;
+      }
+
         /*
         string id = bannerTestID;
         bannerView = new BannerView(id, AdSize.MediumRectangle, AdPosition.Center);
@@ -39,6 +40,7 @@ public class AdsManager : MonoBehaviour
         bannerView.LoadAd(request);
         bannerView.Hide();
 */
+
         AdRequest request = new AdRequest.Builder().Build();
         rewardedAd = new RewardedAd(rewardTestID);
         rewardedAd.LoadAd(request); // 광고 로드
@@ -54,9 +56,7 @@ public class AdsManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rewarded)
-        {
-        }
+        
     }
 
     public void UserChoseToWatchAd()

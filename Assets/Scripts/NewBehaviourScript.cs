@@ -3,25 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using System;
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 using Firebase;
 using Firebase.Auth;
-
-using Firebase.RemoteConfig;
-using Firebase.Extensions;
-
-using GooglePlayGames;
-using GooglePlayGames.BasicApi;
-using UnityEngine.SocialPlatforms;
-
-using System.Threading.Tasks;
-
-using UnityEngine.UI;
-
 
 
 public class NewBehaviourScript : MonoBehaviour
@@ -34,9 +20,8 @@ public class NewBehaviourScript : MonoBehaviour
 
       Debug.LogError("Application.platform: " + Application.platform.ToString());
       //if( Application.platform == RuntimePlatform.WindowsPlayer )
-{
-
-}
+      {
+      }
 
     }
 
@@ -46,14 +31,6 @@ public class NewBehaviourScript : MonoBehaviour
       Debug.LogError("Start");
 
       Screen.SetResolution(Screen.width / 2, Screen.height / 2, true);
-
-#if UNITY_EDITOR
-#else
-
-#if UNITY_ANDROID
-      GooglePlayServicesSignIn.InitializeGooglePlayGames();
-#endif
-#endif //UNITY_EDITOR
 
       while (!FirebaseManager.firebaseInitialized) {
         yield return null;
@@ -74,23 +51,28 @@ public class NewBehaviourScript : MonoBehaviour
       Debug.LogError("StartGame");
 
 #if UNITY_EDITOR
-  string email = "jhhunee@gmail.com";
-  string password = SystemInfo.deviceUniqueIdentifier;;
+      string email = "jhhunee@gmail.com";
+      string password = SystemInfo.deviceUniqueIdentifier;;
 
-  var newUser = await FirebaseManager.SignInWithEmailAndPassword(email, password);
-  //var newUser = await FirebaseManager.CreateUserWithEmailAndPassword(email, password);
+      var newUser = await FirebaseManager.SignInWithEmailAndPassword(email, password);
+      //var newUser = await FirebaseManager.CreateUserWithEmailAndPassword(email, password);
 #else
 
-#if UNITY_ANDROID
-      var newUser = await GooglePlayServicesSignIn.SignIn();
+#if GPGS
+      var newUser = await FirebaseManager.SignIn();
 #endif
+
 #endif
+
+      FirebaseManager.InitializeAnalytics();
 
       //Firebase.Auth.FirebaseUser newUser = FirebaseAuth.DefaultInstance.CurrentUser;
       Debug.LogFormat("------------------- User signed in successfully: {0} ({1})",
         newUser.DisplayName, newUser.UserId);
 
       _authCode.text = newUser.ProviderId;
+
+      AnalyticsManager.Login();
 
       if (newUser != null) {
 /*
@@ -111,14 +93,6 @@ public class NewBehaviourScript : MonoBehaviour
 
   void OnDestroy() {
     Debug.LogError("OnDestroy");
-
-#if UNITY_EDITOR
-#else
-
-#if UNITY_ANDROID      
-    GooglePlayServicesSignIn.SignOut();
-#endif
-#endif //UNITY_EDITOR
   }
 
 }

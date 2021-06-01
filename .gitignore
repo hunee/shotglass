@@ -5,12 +5,14 @@ Assets/GoogleMobileAds
 Assets/GooglePlayGames
 Assets/Parse
 Assets/Plugins/Android/FirebaseApp.androidlib
+Assets/Plugins/Android/FirebaseCrashlytics.androidlib
 Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib
 Assets/Plugins/Android/*.jar
 Assets/Plugins/Android/*.jar.meta
 Assets/Plugins/Android/*.aar
 Assets/Plugins/Android/*.aar.meta
 Assets/Plugins/Android/FirebaseApp.androidlib.meta
+Assets/Plugins/Android/FirebaseCrashlytics.androidlib.meta
 Assets/Plugins/Android/GoogleMobileAdsPlugin.androidlib.meta
 Assets/Plugins/iOS
 Assets/Plugins/iOS.meta
