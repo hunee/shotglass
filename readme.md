@@ -2,6 +2,9 @@
 
 - ### Rubber Duck
 <img src="Resources/a0e32dc5c27bc87a40e04578d4db2a70.jpg" width="450px" height="300px" title="px(픽셀) 크기 설정" alt="RubberDuck"></img><br/>
+
+<br>
+
 <img src="Resources/a0e32dc5c27bc87a40e04578d4db2a70.jpg" width="40%" height="30%" title="%(비율) 크기 설정" alt="RubberDuck"></img>
 
 
@@ -154,15 +157,15 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 adb shell setprop debug.firebase.analytics.app [your_app_package_name]
 ```
 >>>> 2. But if you are working with multiple build variants with different application IDs which are not the same as the app package name, be sure to execute the following command:
-```
+```bash
 adb shell setprop debug.firebase.analytics.app [your_application_id]
 ```
 >>>> Here, application ID is the app ID of your build variant found in the corresponding gradle file. For example, lets say you have x.gradle and y.gradle for two build variants x and y, and you also have the general build.gradle file. To debug the build variant x with application ID com.abc.x, the command will be:
-```
+```bash
 adb shell setprop debug.firebase.analytics.app com.abc.x
 ```
 >>>> Similarly, to debug the build variant y with application ID com.abc.y, the command will be:
-```
+```bash
 adb shell setprop debug.firebase.analytics.app com.abc.y
 ```
 >>>> This behavior persists until you explicitly disable it by executing the following command:
