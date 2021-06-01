@@ -146,20 +146,32 @@ iOS    : ca-app-pub-3940256099942544~1458002511
 >> - ##### [Unity 프로젝트에 Firebase 추가](https://firebase.google.com/docs/unity/setup?hl=ko) - PASS
 >> - ##### Firebase.Analytics - PASS
 >>> - ###### Test device setup
-
 >>>> To enable sending of DebugView data on a connected Android test device for a configured Firebase Analytics app, you can follow the step below:
->>>> If you are simply working with single build variant, the following command is enough:
->>>> adb shell setprop debug.firebase.analytics.app [your_app_package_name]
->>>> But if you are working with multiple build variants with different application IDs which are not the same as the app package name, be sure to execute the following command:
->>>> adb shell setprop debug.firebase.analytics.app [your_application_id]
-Here, application ID is the app ID of your build variant found in the corresponding gradle file. For example, lets say you have x.gradle and y.gradle for two build variants x and y, and you also have the general build.gradle file. To debug the build variant x with application ID com.abc.x, the command will be:
->>>> adb shell setprop debug.firebase.analytics.app com.abc.x
-Similarly, to debug the build variant y with application ID com.abc.y, the command will be:
->>>> adb shell setprop debug.firebase.analytics.app com.abc.y
-This behavior persists until you explicitly disable it by executing the following command:
->>>> adb shell setprop debug.firebase.analytics.app .none.
 
+>>>> 1. If you are simply working with single build variant, the following command is enough:
+```bash
+adb shell setprop debug.firebase.analytics.app [your_app_package_name]
 ```
+>>>> 2. But if you are working with multiple build variants with different application IDs which are not the same as the app package name, be sure to execute the following command:
+```
+adb shell setprop debug.firebase.analytics.app [your_application_id]
+```
+>>>> Here, application ID is the app ID of your build variant found in the corresponding gradle file. For example, lets say you have x.gradle and y.gradle for two build variants x and y, and you also have the general build.gradle file. To debug the build variant x with application ID com.abc.x, the command will be:
+```
+adb shell setprop debug.firebase.analytics.app com.abc.x
+```
+>>>> Similarly, to debug the build variant y with application ID com.abc.y, the command will be:
+```
+adb shell setprop debug.firebase.analytics.app com.abc.y
+```
+>>>> This behavior persists until you explicitly disable it by executing the following command:
+```bash
+adb shell setprop debug.firebase.analytics.app .none.
+```
+
+<br>
+
+```bash
 adb shell setprop debug.firebase.analytics.app com.hunee.shotglass
 ```
 
